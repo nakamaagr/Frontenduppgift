@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&display=swap');
+:root {
+    /* Font families */
+    --ff-primary: 'Raleway',sans-serif;
+    --ff-secondary: 'Crimson Text', serif;
+
+    /* Colors */
+    --color-primary: White;
+    --color-secondary: black;
+    --color-third: purple;
+    --color-fourth: pink;
+    --color-fifth: orange;
+
+
+
+}
+
