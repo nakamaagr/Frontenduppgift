@@ -1,5 +1,176 @@
 @import url('root.css');
 
-h1 {
+h1,h2,h3,h4,h5,h6 {
     font-family: var(--ff-primary);
 }
+
+p {
+    font-family: var(--ff-secondary);
+    font-size: 20px;
+    
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin: 0;
+    font-family: var(--ff-primary);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    transition: all 0.3s ease;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar .navbar-container {
+    width: 90%;
+    border-bottom: 1px solid #999;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .logo  {
+    border: 1px solid #999;
+ } */
+.logo a {
+        max-width: 100%;
+        padding: 10px;
+        margin-right: 35px;
+        max-height: 200px;
+        
+    }
+
+    .logo a img{
+    max-height: 200px;
+    margin: 0;
+    max-width: inherit;
+    object-fit: cover;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+.navbar .menu li a {
+    color: var(--color-third);
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a span {
+    color: var(--color-fifth);
+}
+.navbar .menu li a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+.menu-btn {
+    color:var(--color-secondary) ;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+}
+
+.grid-container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+	grid-template-columns: repeat(12, 1fr);
+    grid-column: 1 / 13;
+}
+header {
+    grid-column: 1 / 13;
+
+}
+
+
+
+.content-section {
+    background: var(--color-fourth);
+    border-radius: 5px;
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+}
+
+main {
+    grid-column: 1 / 13;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    padding: 50px;
+}
+
+.main-wrapper {
+    padding: 10px;
+    border-radius: 10px;
+    grid-column: 2 / 12;
+    background: var(--color-third);
+}
+
+.main-wrapper h1 {
+    padding: 30px;
+    display: inline-block;
+    font-family: var(--ff-primary);
+    border: 1px solid #111;
+    border-radius: 10px;
+
+}
+
+
+
+
+
+
+@media (max-width:1500px) {
+  
+   
+    .menu-btn {
+        margin-right: 15px;
+        font-size: 30px;
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content:"\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        left: -1000%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+        
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 30px;
+    } }
+
+    @media (max-width:900px) {
+        .navbar .navbar-container {
+            justify-content: space-evenly;
+        }
+    }
