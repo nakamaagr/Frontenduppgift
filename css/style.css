@@ -17,9 +17,15 @@ p {
 var(--color-fifth)); */
 html, body {
     background: linear-gradient(#eb8383, #8a90e7);
-     
     margin: 0;
     padding: 0;
+}
+.content-section,
+.image-section,
+.oppettider,
+.main-wrapper h1,
+.footer-item {
+    border: 1px solid #111;
 }
 
 .navbar {
@@ -42,9 +48,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
 }
-/* .logo  {
-    border: 1px solid #999;
- } */
+
 .logo a {
         max-width: 100%;
         padding: 10px;
@@ -102,7 +106,6 @@ header {
 
 
 .content-section {
-    border: 1px solid #111;
     border-radius: 5px;
     grid-column: 1 / 13;
     display: grid;
@@ -113,7 +116,6 @@ header {
 
 .image-section {
     grid-column: 1 / 13;
-    border: 1px solid #111;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     height: 600px;
@@ -131,7 +133,6 @@ header {
 }
 .image-section  .oppettider{
     grid-column: 9 / 13;
-    border: 1px solid #111;
     border-radius: 10px;
     padding: 20px;
 }
@@ -193,7 +194,6 @@ main {
     padding: 30px;
     display: inline-block;
     font-family: var(--ff-primary);
-    border: 1px solid #111;
     border-radius: 10px;
 
 }
@@ -215,7 +215,6 @@ footer {
 .footer-item {
     font-size: 40px;
     text-align: center;
-    border: 1px solid #111;
     padding: 30px;
     border-radius: 10px;
 }
@@ -233,7 +232,7 @@ footer {
 
 
 
-@media (max-width:1500px) {
+@media (max-width:1530px) {
     .menu-btn {
         margin-right: 15px;
         font-size: 30px;
@@ -268,11 +267,6 @@ footer {
         font-size: 30px;
     } 
 }
-    @media (max-width:1000px) {
-        .footer-item {
-            margin: 0 20px;
-        }
-    }
     @media (max-width:1000px) {
         .navbar .navbar-container {
             justify-content: space-evenly;
