@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap');
 :root {
     /* Font families */
-    --ff-primary: 'Raleway',sans-serif;
-    --ff-secondary: 'Crimson Text', serif;
+    --ff-primary: 'Poppins', serif;
+    --ff-secondary: 'Raleway',sans-serif;
+    /* --ff-third: 'Crimson Text', serif; */
 
     /* Colors */
     --color-primary: White;
@@ -10,8 +12,5 @@
     --color-third: purple;
     --color-fourth: pink;
     --color-fifth: orange;
-
-
-
 }
 
