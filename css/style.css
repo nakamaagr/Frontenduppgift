@@ -1,4 +1,5 @@
 @import url('root.css');
+@import url('navbar.css');
 
 * {
     box-sizing: border-box;
@@ -13,8 +14,7 @@ p {
     font-size: 20px;
     
 }
-/* var(--color-fourth), 
-var(--color-fifth)); */
+
 html, body {
     background: linear-gradient(#eb8383, #8a90e7);
     margin: 0;
@@ -28,69 +28,6 @@ html, body {
     border: 1px solid #111;
 }
 
-.navbar {
-    margin: 0;
-    font-family: var(--ff-primary);
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    transition: all 0.3s ease;
-    width: 100%;
-    z-index: 999;
-}
-
-.navbar .navbar-container {
-    width: 90%;
-    border-bottom: 1px solid #111;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo a {
-        max-width: 100%;
-        padding: 10px;
-        margin-right: 35px;
-        max-height: 200px;
-        
-    }
-
-    .logo a img{
-    max-height: 200px;
-    margin: 0;
-    max-width: inherit;
-    object-fit: cover;
-}
-
-.navbar .menu li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-}
-.navbar .menu li a {
-    color: var(--color-secondary);
-    text-decoration: none;
-    display: block;
-    font-size: 25px;
-    font-weight: 800;
-    transition: color 0.3s ease;
-}
-.navbar .menu li a span {
-    color: var(--color-fifth);
-}
-.navbar .menu li a:hover {
-    color: var(--color-secondary);
-    text-decoration: underline;
-}
-.menu-btn {
-    color:var(--color-secondary) ;
-    cursor: pointer;
-    display: none;
-    font-size: 40px;
-}
-
 .grid-container {
     width: 90%;
     margin: 0 auto;
@@ -98,12 +35,11 @@ html, body {
 	grid-template-columns: repeat(12, 1fr);
     grid-column: 1 / 13;
 }
+
 header {
     grid-column: 1 / 13;
 
 }
-
-
 
 .content-section {
     border-radius: 5px;
@@ -131,11 +67,13 @@ header {
     border-radius: 10px;
     
 }
+
 .image-section  .oppettider{
     grid-column: 9 / 13;
     border-radius: 10px;
     padding: 20px;
 }
+
 .oppettider > h1 {
     text-decoration: underline;
 }
@@ -149,10 +87,12 @@ header {
     list-style: none;
     border-bottom: 1px solid #111;
 }
+
 .pos span {
     margin: 0 20px;
     text-decoration: underline;
 }
+
 .pos h3 span {
     text-decoration: none;
     margin: 0;
@@ -166,10 +106,7 @@ header {
 .pos3 p {
     color: rgb(151, 12, 12);
     font-weight:bolder;
-
 }
-
-
 
 main {
     grid-column: 1 / 13;
@@ -177,17 +114,18 @@ main {
     display: grid;
     grid-template-columns: repeat(12,1fr);
 }
+
 .test {
     grid-column: 2 / 12;
     margin: 20px 0;
 }
+
 .main-wrapper {
     text-align: center;
     padding: 10px;
     border-radius: 10px;
     grid-column: 2 / 12;
     margin: 20px;
-   
 }
 
 .main-wrapper h1 {
@@ -195,7 +133,6 @@ main {
     display: inline-block;
     font-family: var(--ff-primary);
     border-radius: 10px;
-
 }
 
 .footer-container {
@@ -230,66 +167,24 @@ footer {
     color: var(--color-secondary);
 }
 
-
-
-@media (max-width:1530px) {
-    .menu-btn {
-        margin-right: 15px;
-        font-size: 30px;
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn i.active:before{
-        content:"\f00d";
-    }
-    .navbar .menu {
-        position: fixed;
-        background: #111;
-        height: 100vh;
-        width: 100%;
-        left: -1000%;
-        top: 0;
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
-    }
-
-    .navbar .menu.active {
-        left: 0;
-    }
-    .navbar .menu li {
-        display: block;
-        
-    }
-    .navbar .menu li a{
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 30px;
-    } 
+@media (max-width:1000px) {
+.image-section {
+    display: block;
 }
-    @media (max-width:1000px) {
-        .navbar .navbar-container {
-            justify-content: space-evenly;
-        }
-        .image-section {
-            display: block;
-        }
-        footer {
-            display: block;
-        }
+footer {
+    display: block;
+}
 
-        .footer-item {
-            margin: 30px auto;
-            padding: 30px;
-            width: 70%;
+.footer-item {
+    margin: 30px auto;
+    padding: 30px;
+    width: 70%; 
+}
+.footer-item p {
+    font-size: 15px;
+}  
+.footer-item:hover {
+    transform: scale(1.05);
+}
 
-            
-        }
-        .footer-item p {
-            font-size: 15px;
-        }
-        .footer-item:hover {
-            transform: scale(1.05);
-        }
-
-    }
+}
