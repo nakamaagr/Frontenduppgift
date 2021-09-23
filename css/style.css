@@ -1,5 +1,9 @@
 @import url('root.css');
 
+* {
+    box-sizing: border-box;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-family: var(--ff-primary);
 }
@@ -9,8 +13,11 @@ p {
     font-size: 20px;
     
 }
-
+/* var(--color-fourth), 
+var(--color-fifth)); */
 html, body {
+    background: linear-gradient(#eb8383, #8a90e7);
+     
     margin: 0;
     padding: 0;
 }
@@ -28,7 +35,7 @@ html, body {
 
 .navbar .navbar-container {
     width: 90%;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #111;
     margin: 0 auto;
     margin-bottom: 30px;
     display: flex;
@@ -59,7 +66,7 @@ html, body {
     margin: 0 20px;
 }
 .navbar .menu li a {
-    color: var(--color-third);
+    color: var(--color-secondary);
     text-decoration: none;
     display: block;
     font-size: 25px;
@@ -95,27 +102,91 @@ header {
 
 
 .content-section {
-    background: var(--color-fourth);
+    border: 1px solid #111;
     border-radius: 5px;
     grid-column: 1 / 13;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    margin: 20px 0;
     
 }
+
+.image-section {
+    grid-column: 1 / 13;
+    border: 1px solid #111;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 600px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.image-section  .main-image {
+    grid-column: 1 / 8;
+    background: url('/Images/beerpic.jpg');
+    background-size: cover;
+    height: auto;
+    border-radius: 10px;
+    
+}
+.image-section  .oppettider{
+    grid-column: 9 / 13;
+    border: 1px solid #111;
+    border-radius: 10px;
+    padding: 20px;
+}
+.oppettider > h1 {
+    text-decoration: underline;
+}
+
+.image-section  .oppettider h1{
+    text-align: center;
+}
+
+.pos {
+    text-decoration: none;
+    list-style: none;
+    border-bottom: 1px solid #111;
+}
+.pos span {
+    margin: 0 20px;
+    text-decoration: underline;
+}
+.pos h3 span {
+    text-decoration: none;
+    margin: 0;
+    color: var(--color-fifth);
+}
+
+.pos1 {
+    border-top: 1px solid #111;
+}
+
+.pos3 p {
+    color: rgb(151, 12, 12);
+    font-weight:bolder;
+
+}
+
+
 
 main {
     grid-column: 1 / 13;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    padding: 50px;
 }
-
+.test {
+    grid-column: 2 / 12;
+    margin: 20px 0;
+}
 .main-wrapper {
+    text-align: center;
     padding: 10px;
     border-radius: 10px;
     grid-column: 2 / 12;
-    background: var(--color-third);
+    margin: 20px;
+   
 }
 
 .main-wrapper h1 {
@@ -127,14 +198,42 @@ main {
 
 }
 
+.footer-container {
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    border-top: 1px solid #111;
+}
 
-
+footer {
+    grid-column: 1 / 13;
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+.footer-item {
+    font-size: 40px;
+    text-align: center;
+    border: 1px solid #111;
+    padding: 30px;
+    border-radius: 10px;
+}
+.footer-item:hover {
+    transform: scale(1.15);
+}
+.footer-item i {
+    color: var(--color-fifth);
+}
+.footer-item a {
+    text-decoration:none;
+    list-style: none;
+    color: var(--color-secondary);
+}
 
 
 
 @media (max-width:1500px) {
-  
-   
     .menu-btn {
         margin-right: 15px;
         font-size: 30px;
@@ -167,10 +266,36 @@ main {
         display: inline-block;
         margin: 20px 0;
         font-size: 30px;
-    } }
-
-    @media (max-width:900px) {
+    } 
+}
+    @media (max-width:1000px) {
+        .footer-item {
+            margin: 0 20px;
+        }
+    }
+    @media (max-width:1000px) {
         .navbar .navbar-container {
             justify-content: space-evenly;
         }
+        .image-section {
+            display: block;
+        }
+        footer {
+            display: block;
+        }
+
+        .footer-item {
+            margin: 30px auto;
+            padding: 30px;
+            width: 70%;
+
+            
+        }
+        .footer-item p {
+            font-size: 15px;
+        }
+        .footer-item:hover {
+            transform: scale(1.05);
+        }
+
     }
