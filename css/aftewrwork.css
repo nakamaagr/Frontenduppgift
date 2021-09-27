@@ -4,6 +4,8 @@
 @import url('style.css');
 
 
+
+
 .drinkar {
     grid-column: 2 / 12;
     margin: 20px 0;
@@ -18,4 +20,5 @@
 .oppettider {
     grid-column: 12 /12;
     margin: 20px 0;
+
 }
